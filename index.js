@@ -13,6 +13,10 @@ app.use("/api/auth",authRoute)
 app.use("/api/user",userRoute)
 app.use("/api/todos",todoRoute)
 
+app.get("/test",(req,res)=>{
+    res.send("Hello World")
+})
+
 PORT = process.env.PORT
 app.listen(PORT,()=>{
     console.log(`server is running on ${PORT}`)
